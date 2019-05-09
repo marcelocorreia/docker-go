@@ -1,0 +1,27 @@
+FROM golang:alpine
+
+MAINTAINER marcelo correia <marcelo@correia.io>
+
+RUN apk update
+RUN set -ex && \
+    apk add --no-cache --update \
+        bash \
+        tzdata \
+        git \
+        curl \
+        zsh \
+        sudo \
+        make
+
+RUN wget https://github.com/goreleaser/goreleaser/releases/download/v0.106.0/goreleaser_Linux_x86_64.tar.gz
+RUN tar -xvzf goreleaser_Linux_x86_64.tar.gz
+RUN mv goreleaser /usr/local/bin
+
+RUN curl -L https://github.com/golang/dep/releases/download/v0.5.1/dep-linux-amd64 -o /usr/local/bin/dep
+RUN chmod 0750 /usr/local/bin/dep
+
+RUN go get golang.org/x/tools/cmd/stringer
+
+RUN curl https://glide.sh/get | sh
+
+CMD ["uname","-a"]

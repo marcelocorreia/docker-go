@@ -13,6 +13,7 @@ readme:
   overview: |
     Docker Go image
 
+  description: Docker Golang image with some goodies
   dockerfiles:
     - Dockerfile.alpine
 

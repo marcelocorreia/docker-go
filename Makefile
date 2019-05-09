@@ -4,7 +4,7 @@ GITHUB_USER := marcelocorreia
 DOCKER_NAMESPACE := marcelocorreia
 IMAGE_NAME := $(DOCKER_NAMESPACE)/$(NAME)
 GIT_REPO_NAME := docker-$(NAME)
-IMAGE_SOURCE_TYPES ?= alpine
+IMAGE_SOURCE_TYPES ?= jessie-slim buster-slim alpine
 REPO_URL := git@github.com:$(GITHUB_USER)/$(GIT_REPO_NAME).git
 
 GIT_BRANCH ?= master
@@ -39,6 +39,14 @@ open-page:
 
 grip:
 	grip -b
+
+hammer-forge-all: hammer-forge-make hammer-forge-readme
+
+hammer-forge-readme:
+	@hammer forge addon --name README.tpl.md .
+
+hammer-forge-make:
+	@hammer forge addon --name Makefile.tpl .
 
 # Internal targets
 _setup-versions:

@@ -28,7 +28,8 @@ readme:
     ### Extending
     ```Dockerfile
     FROM marcelocorreia/marcelocorreia/go
-    ...```
+    ...
+    ```
 
   shields:
     - https://img.shields.io/docker/pulls/marcelocorreia/go.svg

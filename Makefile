@@ -43,10 +43,10 @@ grip:
 hammer-forge-all: hammer-forge-make hammer-forge-readme
 
 hammer-forge-readme:
-	@hammer forge addon --name README.tpl.md .
+	-@hammer forge addon --name README.tpl.md .
 
 hammer-forge-make:
-	@hammer forge addon --name Makefile.tpl .
+	-@hammer forge addon --name Makefile.tpl .
 
 # Internal targets
 _setup-versions:

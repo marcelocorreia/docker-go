@@ -33,7 +33,8 @@ $ docker run --rm -e TZ=Australia/Sydney marcelocorreia/go version
 ### Extending
 ```Dockerfile
 FROM marcelocorreia/marcelocorreia/go
-...```
+...
+```
 
 
 

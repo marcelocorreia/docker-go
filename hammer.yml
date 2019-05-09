@@ -1,7 +1,7 @@
 ---
 name: docker-go
 blueprint:
-  name: docker/image
+  name: docker/multi-image
 
 tags:
   - go
@@ -14,7 +14,7 @@ readme:
     Docker Go image
 
   dockerfiles:
-    - Dockerfile
+    - Dockerfile.alpine
 
   usage: |
     ```bash

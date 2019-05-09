@@ -1,7 +1,6 @@
 <!-- Auto generated file, DO NOT EDIT. Please refer to README.yml -->
 # docker-go
 
----
 ![https://img.shields.io/docker/pulls/marcelocorreia/go.svg](https://img.shields.io/docker/pulls/marcelocorreia/go.svg)
 ![https://img.shields.io/github/languages/top/marcelocorreia/docker-go.svg](https://img.shields.io/github/languages/top/marcelocorreia/docker-go.svg)
 ![https://api.travis-ci.org/marcelocorreia/docker-go.svg?branch=master](https://api.travis-ci.org/marcelocorreia/docker-go.svg?branch=master)
